@@ -1,0 +1,13 @@
+package in.ashokit.binding;
+
+public class Passenger {
+	
+	private String name;
+	private String dob;
+	private String gender;
+	private String doj;
+	private String from;
+	private String to;
+	private String trainNum;
+
+}

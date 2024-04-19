@@ -1,0 +1,24 @@
+package in.ashokit.rest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import in.ashokit.binding.Course;
+import in.ashokit.service.CourseService;
+
+@RestController
+public class CourseRestController {
+	@Autowired
+	private CourseService service;
+	
+	@PostMapping("/course")
+	public ResponseEntity<String> createCourse(@RequestBody Course course){
+		String status = service.upsert(course);
+		return new ResponseEntity<>(status, HttpStatus.CREATED);
+	}
+
+}

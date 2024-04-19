@@ -1,0 +1,28 @@
+package in.ashokit.service;
+
+import java.util.List;
+
+import in.ashokit.binding.Passenger;
+import in.ashokit.binding.Ticket;
+
+public class TicketServiceImp implements TicketInterface {
+
+	@Override
+	public Ticket bookTicket(Passenger passenger) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Ticket getTicket(Integer ticketId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Ticket> getTickets() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
